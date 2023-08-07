@@ -60,12 +60,35 @@ cd ardupilot/ArduCopter
 sim_vehicle.py -w
 
 ### Restart Ubuntu System
+cd
+
+. ~/.profile
+
+cd ardupilot/ArduCopter
+
+sim_vehicle.py -w
 
 cd ardupilot/ArduCopter
 
 sim_vehicle.py --console --map
 
-ArduPilot Gazebo Plugin
+### Gazebo Kurulumu
+#### Gerekli İzinlerin Ayarlanması
+
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+
+wget https://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+
+
+#### Gazebo Kurulumu
+
+sudo apt update
+
+sudo apt-get install gazebo9
+
+sudo apt-get install libgazebo9-dev
+#### Gazebo Ardupilot Eklentisi Kurulumu
+
 git clone https://github.com/khancyr/ardupilot_gazebo
 
 cd ardupilot_gazebo
@@ -79,6 +102,16 @@ cmake ..
 make -j4
 
 sudo make install
+
+echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
+
+echo 'export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models' >> ~/.bashrc
+
+. ~/.bashrc
+
+#### Gazebo Simülasyonunu ve Ardupilot SITL'i Başlatma
+
+gazebo --verbose worlds/iris_arducopter_runway.world               *( BU KISMI ÇALIŞTIRDIKTAN SONRA TERMİNALDE + YA BASIP YENİ TERMİNAL YANDA BELİRİCEK ORAYADA DEVAMI YAZILICAK)
 
 ### Dronekit
 pip install dronekit | pip3 install dronekit            * ikisinden biri çalıştırılmalı
