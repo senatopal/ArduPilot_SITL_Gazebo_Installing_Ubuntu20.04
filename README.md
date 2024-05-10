@@ -44,7 +44,6 @@ sim_vehicle.py -w
 
 ## Install Gazebo [***18.04-20.04***]
 
-Setup your computer to accept software from http://packages.osrfoundation.org:
 ```
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 ```
