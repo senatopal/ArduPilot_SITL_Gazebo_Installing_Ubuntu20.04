@@ -1,6 +1,6 @@
 # Installing Ardupilot and MAVProxy Ubuntu 20.04
 
-## Video Tutorial at https://youtu.be/1FpJvUVPxL0
+
 
 ## Clone ArduPilot
 
@@ -40,7 +40,7 @@ sim_vehicle.py -w
 ```
 # Installing Gazebo and ArduPilot Plugin
 
-### Video Tutorial at https://youtu.be/m7hPyJJmWmU
+
 
 ## Install Gazebo [***18.04-20.04***]
 
