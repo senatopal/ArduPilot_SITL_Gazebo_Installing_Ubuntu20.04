@@ -1,4 +1,4 @@
-# Installing Ardupilot and MAVProxy Ubuntu 20.04
+# Installing Ardupilot, Gazebo and MAVProxy Ubuntu 20.04
 
 
 
