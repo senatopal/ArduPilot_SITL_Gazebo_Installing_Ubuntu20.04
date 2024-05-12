@@ -21,7 +21,7 @@ reload profile
 ```
 . ~/.profile
 ```
-## If "git submodule update" gives fails
+## If the next statement gives fails
 ```
 git config --global url.https://.insteadOf git://
 ```
