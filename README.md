@@ -4,7 +4,6 @@
 
 ## Clone ArduPilot
 
-In home directory:
 ```
 cd ~
 sudo apt install git
@@ -22,12 +21,10 @@ reload profile
 ```
 . ~/.profile
 ```
-## If the next step "git submodule update" fails
+## If "git submodule update" gives fails
 ```
 git config --global url.https://.insteadOf git://
 ```
-
-## Checkout Latest Copter Build
 ```
 git checkout Copter-4.0.4
 git submodule update --init --recursive
@@ -42,7 +39,7 @@ sim_vehicle.py -w
 
 
 
-## Install Gazebo [***18.04-20.04***]
+## Installing Gazebo [***18.04-20.04***]
 
 ```
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
@@ -71,13 +68,13 @@ sudo apt-get install gazebo11 libgazebo11-dev
 for more detailed instructions for installing gazebo checkout http://gazebosim.org/tutorials?tut=install_ubuntu
 
 
-## Install Gazebo plugin for APM (ArduPilot Master) :
+## Installing Gazebo plugin for ArduPilot Master :
 ```
 cd ~
 git clone https://github.com/khancyr/ardupilot_gazebo.git
 cd ardupilot_gazebo
 ```
-***Ubuntu 18.04 only*** checkout dev
+***Ubuntu 18.04 only***
 ```
 git checkout dev
 ```
@@ -99,8 +96,6 @@ echo 'export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models' >> ~/.bashrc
 ```
 
 ## Run Simulator
-
-**NOTE the iris_arducopter_runway is not currently working in gazebo11. The iq_sim worlds DO work**
 
 In one Terminal (Terminal 1), run Gazebo:
 ```
